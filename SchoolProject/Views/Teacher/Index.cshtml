@@ -1,0 +1,13 @@
+@using SchoolProject
+@model IEnumerable<Teacher>
+@{
+	ViewBag.Title = "Teachers";
+}
+<h1>@ViewBag.Title</h1>
+<ul>
+@foreach (var teacher in Model)
+{
+	<li>@teacher.FirstName @teacher.LastName</li>
+}
+</ul>
+<div>@Html.ActionLink("New", "create")
